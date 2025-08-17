@@ -2,17 +2,17 @@ interface CarDescription {
     model: string;
     make: string;
     price: string;
+    image: string;
 }
 
 interface Props {
-    imageSource: string;
     car: CarDescription
 }
 
-const CarCard = ({car, imageSource}: Props) => {
+const CarCard = ({car}: Props) => {
   return (
     <div>
-      <img src={imageSource} alt="" />
+      <img src={car.image} alt="" />
       <h3>{car.model} {car.make}</h3>
       <p>&dollar; {car.price}</p>
     </div>
