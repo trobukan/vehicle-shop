@@ -1,6 +1,6 @@
 interface CarDescription {
-    title: string;
     model: string;
+    make: string;
     price: string;
 }
 
@@ -13,8 +13,8 @@ const CarCard = ({car, imageSource}: Props) => {
   return (
     <div>
       <img src={imageSource} alt="" />
-      <h3>{car.title}</h3>
-      <p>Model: {car.model} Price: {car.price}</p>
+      <h3>{car.model} {car.make}</h3>
+      <p>&dollar; {car.price}</p>
     </div>
   )
 }
