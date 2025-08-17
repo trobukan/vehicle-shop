@@ -1,3 +1,5 @@
+import CarGrid from "../components/CarGrid";
+
 interface Props {
     className?: string;
 }
@@ -5,7 +7,7 @@ interface Props {
 const Section = ({className}:Props) => {
   return (
     <section className={className}>
-        Section
+        <CarGrid />
     </section>
   )
 }

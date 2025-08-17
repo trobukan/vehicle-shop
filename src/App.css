@@ -4,3 +4,22 @@
   flex: 1 0;
   justify-content: center;
 }
+
+.car-container { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-m);
+}
+
+.car-card {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.car-card img {
+  padding: var(--spacing-m);
+}
+
+.car-card h3, p {
+  padding: 0 var(--spacing-l)
+}
