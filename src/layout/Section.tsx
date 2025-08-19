@@ -1,15 +1,13 @@
-import CarGrid from "../components/CarGrid";
+import { type ReactNode } from "react";
 
 interface Props {
-    className?: string;
+  className?: string;
+  children?: ReactNode;
+  id?: string;
 }
 
-const Section = ({className}:Props) => {
-  return (
-    <section className={className}>
-        <CarGrid />
-    </section>
-  )
-}
+const Section = ({ className, children, id }: Props) => {
+  return <section className={className} id={id}>{children}</section>;
+};
 
-export default Section
+export default Section;

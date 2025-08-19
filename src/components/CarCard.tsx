@@ -1,4 +1,5 @@
 import type CarDescription from "../types/CarDescription";
+import { Link } from "react-router-dom";
 
 interface Props {
   car: CarDescription;
@@ -6,14 +7,19 @@ interface Props {
 
 const CarCard = ({ car }: Props) => {
   const { image, model, make, price } = car;
+
   return (
-    <div className="car-card">
-      <img src={image} alt="" />
-      <h3>
+    <Link
+      to={`cars/${car.id}`}
+      state={{ carData: car }}
+      className="car-card shadow-border"
+    >
+      <img className="car-card__image" src={image} alt="" />
+      <h3 className="car-card__title">
         {model} {make}
       </h3>
-      <p>&#36;{price}</p>
-    </div>
+      <p className="car-card__text">&#36;{price}</p>
+    </Link>
   );
 };
 

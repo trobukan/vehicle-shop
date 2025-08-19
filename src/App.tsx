@@ -1,17 +1,14 @@
-import "./App.css";
-import Header from "./layout/Header";
-import Section from "./layout/Section";
-import Footer from "./layout/Footer";
-import Main from "./layout/Main";
+import Home from "./pages/Home"
+import CarDetailsPage from "./pages/CarDetails"
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Header />
-      <Main className={"main-content-wrapper"}>
-        <Section />
-      </Main>
-      <Footer />
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="cars/:id" element={<CarDetailsPage/>}/>
+    </Routes>
     </>
   );
 }
