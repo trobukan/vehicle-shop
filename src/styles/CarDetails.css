@@ -1,0 +1,42 @@
+@import "./Nav.css";
+
+.car-details-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.car-details__card {
+  display: flex;
+  flex: 1 1 300px;
+  gap: var(--spacing-s);
+  align-items: center;
+  border-radius: 8px;
+  padding: var(--spacing-l);
+  max-width: 900px;
+  flex-wrap: wrap;
+}
+.car-details__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.car-details__info {
+  font-size: var(--spacing-l);
+}
+
+.car-details__button {
+  margin-top: var(--spacing-l);
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .car-details__card {
+    flex-direction: column;
+    text-align: center;
+  }
+}

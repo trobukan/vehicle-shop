@@ -1,0 +1,18 @@
+.nav-container {
+  margin: 0 var(--spacing-s);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--spacing-s);
+}
+
+.nav__link-item {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: bold;
+  font-size: var(--spacing-l);
+}
