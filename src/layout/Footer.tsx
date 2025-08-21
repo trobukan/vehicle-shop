@@ -13,7 +13,7 @@ const Footer = ({ className }: Props) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Licença MIT
+          MIT Licence
         </a>
         .
       </p>
