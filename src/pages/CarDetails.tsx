@@ -1,13 +1,19 @@
 import { Link, useParams } from "react-router-dom";
-import Nav from "../layout/Nav";
+import Nav from "../layouts/Nav";
 
 import "../styles/CarDetails.css";
 import "../styles/ErroPage.css";
-import CARS from "../api/data";
+
+import { useCarsContext } from "../hooks/useCarsContext";
 
 const CarDetails = () => {
   const { id } = useParams();
-  const car = CARS.find((c) => c.id == id);
+  const { cars, loading, errorMessage } = useCarsContext();
+
+  if (loading) return <p>Loading...</p>;
+  if (errorMessage) return <p>{errorMessage}</p>;
+  
+  const car = cars.find((c) => c.id == id);
 
   if (!car) {
     return (
@@ -61,6 +67,8 @@ const CarDetails = () => {
       </div>
     </>
   );
+
+  return <div></div>;
 };
 
 export default CarDetails;
